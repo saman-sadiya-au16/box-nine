@@ -23,11 +23,11 @@ router.post(
 );
 
 router.get('/login', function(req, res, next) {
-    res.render('login', { title: 'Login' });
+    res.render('login', { title: 'Login', script: 'adminlogin.js' });
 });
 
 router.get('/signup', function(req, res, next) {
-    res.render('signup', { title: 'Signup' });
+    res.render('signup', { title: 'Signup', script:  'signup.js'});
 });
 
 router.get("/signout", signout);
