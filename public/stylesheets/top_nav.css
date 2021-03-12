@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.nav-logo {
+    width: 80px;
+    margin-left: 24px;
+}
+
+.navigation-bar {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #192537;
+}
+.navigation-bar ul {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+.navigation-bar li {
+    list-style-type: none;
+    padding: 0px;
+    height: 24px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    display: inline;
+    align-self: center;
+
+}
+
+.navigation-bar li a {
+    color: #edf0f1;
+    font-size: 16px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    line-height: 70px;
+    padding: 5px 15px;
+    opacity: 0.7;
+    align-self: center;
+}
+
+#menu {
+    float: right;
+}
+
+.hide-navbar {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.fa-airbnb {
+    color: red;
+    font-size: 42px;
+}
+
+.fa-check, .fa-spinner, .fa-exclamation-triangle, .fa-bullhorn, .fa-calendar-check, .fa-wallet, .fa-rupee-sign {
+    font-size: 42px;
+}
+
+.card-s:hover{
+    background-color: rgb(7, 62, 94);
+    color: white;
+    transition: all .2s ease;
+}
+
+.thead-dark{
+    background-color: #192537 !important;
+}
+
+.btn-secondary{
+    background-color: #192537 !important;
+}
+
+#cart, #order, #logout{
+    background-color: transparent;
+    border: none;
+    color: #d8d8d8;
+}

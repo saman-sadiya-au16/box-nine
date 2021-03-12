@@ -1,0 +1,43 @@
+<main class="container mb-5">
+    <div class="text-center">
+        <h1 class="text-color-main">Recent Order list.</h1>
+    </div>
+    {{#each order}}
+    <div class="mb-3">
+        <div class="card ">
+            <div class="card-header d-flex flex-direction-row justify-content-between">
+                <div style="width: 40%;">
+                    <h6>ID: {{this._id}}</h6>
+                    <h6>Name: {{this.user.name}}</h6>
+                    <h6>Email: {{this.user.email}}</h6>
+                </div>
+                <div class="text-right" style="width: 60%;">
+                    <h5><i class="fas fa-clock"> {{this.createdAt}}</i></h5>
+                    <h6>Address: {{this.address}}</h6>
+                </div>
+            </div>
+        <div class="card-body ">
+            {{#each this.products }}
+            <div class="card-text d-flex flex-direction-row justify-content-between">
+                <h6 class="mr-3">{{this.quantity}} x {{this.name}}</h5>
+                <h6>₹{{this.price}}</h5>
+            </div>
+            {{/each}}
+            {{!-- <div class="card-text d-flex flex-direction-row justify-content-between">
+                <h6>1 x Grilled Lamb chops</h5>
+                <h6>₹121</h5>
+            </div> --}}
+
+            <div class="card-text bg-light d-flex justify-content-between">
+                <div>Total Cost</div>
+                <div>₹ {{this.amount}}</div>
+            </div>
+            </div>
+            <div>
+            <button class="btn btn-secondary btn-lg btn-block" role="button">Order Status: {{this.status}}</button>
+            </div>
+
+        </div>
+        </div>
+    {{/each}}
+</main>

@@ -1,0 +1,52 @@
+<main>
+    <div class="text-center">
+        <h1 class="text-color-main">Recent Order list.</h1>
+    </div>
+<div class="container mt-3">
+    <div>
+        <div class="row">
+            <div class="col">
+                <div class="table-responsive-sm">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Product</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table">
+                            {{#each cart.products }}
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">{{this.name}}</th>
+                                <th scope="col">{{this.quantity}}</th>
+                                <th scope="col"><span class="text-info text-monospace"> ₹ {{this.price}}</span></th>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="card-text bg-light d-flex justify-content-end mr-5" style="width: 87.5%; font-size: x-large;">
+                <div class="mr-5">Total Amount</div>
+                <div class="mr-5 font-weight-bolder text-primary text-monospace" style="font-size: x-large;">₹ <span id="totalPrice">{{totalPrice}}</span></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 mt-3">
+            <div class="form-group"> <label for="form_message">Customer Address:</label> <textarea id="address" name="address" class="form-control" placeholder="Please enter the address." rows="4" required="required" data-error="Please, leave us a message."></textarea> </div>
+        </div>
+        <p id="add-address" class="text-danger ml-5 pl-5"></p>
+    </div>
+    {{#if cart.products }}
+    <div>
+        <button id="place-order" data-products="{{cart.products}}" data-total="{{totalPrice}}" data-cart-id="{{cart._id}}" class="btn btn-secondary btn-lg btn-block mr-3" style="width: 100%;" role="button">Place Order</button>
+    </div>
+    {{/if}}
+</div>
+</main>
+<script src="/javascripts/cart.js"></script>

@@ -1,0 +1,45 @@
+
+h1 {
+    margin-bottom: 40px
+}
+
+label {
+    color: #333
+}
+
+.btn-send {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    width: 80%;
+    margin-left: 3px
+}
+
+/* .help-block.with-errors {
+    color: #ff5050;
+    margin-top: 5px
+} */
+
+.card {
+    margin-left: 10px;
+    margin-right: 10px
+}
+
+.btn-info {
+    background-color: #192537!important;
+}
+
+.text-color-main{
+    color: #192537!important;
+}
+
+.btn-primary{
+    background-color:#0d5061!important;
+    border-color: #111a29!important;
+
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #245870!important;
+}
